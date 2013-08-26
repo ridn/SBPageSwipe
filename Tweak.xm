@@ -15,18 +15,14 @@
 	CGPoint prevLocation = [touch previousLocationInView:(UIView *)self];
 	
 	//dont hate ;P
-	int totalPages = 0;
-	for(int i=0; [[objc_getClass("SBIconController") sharedInstance] _iconListIndexIsValid:i]; i++)
-	{
-		totalPages = i;
-	}
-	
+	int totalPages = [self numberOfPages] - 2;
+	//one for spotlight and one more b/c indices start at 0!
+
 	if(startPoint.x - prevLocation.x > 0)
 	{
 		[[objc_getClass("SBIconController") sharedInstance] scrollToIconListAtIndex:totalPages animate:YES];
 	}else{
 		[[objc_getClass("SBIconController") sharedInstance] scrollToIconListAtIndex:0 animate:YES];
 	}
-
 }
 %end
