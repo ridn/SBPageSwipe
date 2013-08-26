@@ -23,10 +23,9 @@
 	
 	if(startPoint.x - prevLocation.x > 0)
 	{
-	[[objc_getClass("SBIconController") sharedInstance] scrollToIconListAtIndex:totalPages animate:YES];
+		[[objc_getClass("SBIconController") sharedInstance] scrollToIconListAtIndex:totalPages animate:YES];
 	}else{
-	[[objc_getClass("SBIconController") sharedInstance] scrollToIconListAtIndex:0 animate:YES];
-	
+		[[objc_getClass("SBIconController") sharedInstance] scrollToIconListAtIndex:0 animate:YES];
 	}
 
 }
